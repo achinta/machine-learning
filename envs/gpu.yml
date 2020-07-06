@@ -141,5 +141,30 @@ dependencies:
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h7b6447c_3
   - zstd=1.4.3=h3b9ef0a_0
+  - pip:
+    - ase==3.19.1
+    - chardet==3.0.4
+    - cycler==0.10.0
+    - googledrivedownloader==0.4
+    - h5py==2.10.0
+    - idna==2.10
+    - isodate==0.6.0
+    - joblib==0.16.0
+    - kiwisolver==1.2.0
+    - matplotlib==3.2.2
+    - networkx==2.4
+    - plyfile==0.7.2
+    - rdflib==5.0.0
+    - requests==2.24.0
+    - scikit-learn==0.23.1
+    - scipy==1.5.1
+    - threadpoolctl==2.1.0
+    - torch-cluster==1.5.4
+    - torch-geometric==1.5.0
+    - torch-scatter==2.0.4
+    - torch-sparse==0.6.1
+    - torch-spline-conv==1.2.0
+    - tqdm==4.47.0
+    - urllib3==1.25.9
 prefix: /home/achinta/miniconda3/envs/gpu
 
