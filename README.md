@@ -15,7 +15,7 @@ My Machine Code for personal use. So it is very unstructured.
 Positional Encodings - https://kazemnejad.com/blog/transformer_architecture_positional_encoding/
 
 #### Machine Learning
-https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning
-https://github.com/satkol/cs236756-intro-to-ml
+- https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning
+- https://github.com/satkol/cs236756-intro-to-ml
 
 
