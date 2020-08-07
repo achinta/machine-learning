@@ -2,7 +2,6 @@
 My Machine Code for personal use. So it is very unstructured. 
 
 ## Good references
-These are the documents references which I found very useful when learning. 
 
 #### LSTM
 - [Fancy RNNS](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture07-fancy-rnn.pdf) from [CS224N 2019 from Stanford](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/)
@@ -14,5 +13,9 @@ These are the documents references which I found very useful when learning.
  - http://vandergoten.ai/2018-09-18-attention-is-all-you-need/
  
 Positional Encodings - https://kazemnejad.com/blog/transformer_architecture_positional_encoding/
+
+#### Machine Learning
+https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning
+https://github.com/satkol/cs236756-intro-to-ml
 
 
