@@ -20,3 +20,10 @@ pip install torch-cluster==latest+cu101 -f https://pytorch-geometric.com/whl/tor
 pip install torch-spline-conv==latest+cu101 -f https://pytorch-geometric.com/whl/torch-1.5.0.html
 pip install torch-geometric
 ```
+
+### cudf15
+```shell
+conda install -y -c rapidsai -c nvidia -c numba -c conda-forge -c pytorch cudf=0.15 cudatoolkit=10.1 pytorch torchvision scikit-learn jupyterlab jupyterlab-git nodejs 
+
+pip install sklearn fastai pytorch-lightning
+```
