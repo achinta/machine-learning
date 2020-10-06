@@ -25,5 +25,5 @@ pip install torch-geometric
 ```shell
 conda install -y -c rapidsai -c nvidia -c numba -c conda-forge -c pytorch cudf=0.15 cudatoolkit=10.1 pytorch torchvision scikit-learn jupyterlab jupyterlab-git nodejs 
 
-pip install sklearn fastai pytorch-lightning
+pip install sklearn fastai tqdm==tqdm==4.48.2 pytorch-lightning==0.9.0
 ```
