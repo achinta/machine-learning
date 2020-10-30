@@ -27,3 +27,10 @@ conda install -y -c rapidsai -c nvidia -c numba -c conda-forge -c pytorch cudf=0
 
 pip install sklearn fastai tqdm==tqdm==4.48.2 pytorch-lightning==0.9.0 seaborn
 ```
+
+### cudf16
+```shell
+conda install -y -c rapidsai -c nvidia -c numba -c conda-forge -c pytorch cudf=0.16 cudatoolkit pytorch torchvision scikit-learn jupyterlab jupyterlab-git nodejs 
+
+pip install sklearn fastai tqdm==tqdm==4.48.2 pytorch-lightning==1.0.0 seaborn wandb
+```
