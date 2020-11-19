@@ -9,7 +9,7 @@
  - https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/
  - https://towardsdatascience.com/attn-illustrated-attention-5ec4ad276ee3
  - http://vandergoten.ai/2018-09-18-attention-is-all-you-need/
- - [The Illustrated Transformer](https://jalammar.github.io/how-gpt3-works-visualizations-animations) (Alammar, 2018)
+ - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer) (Alammar, 2018)
  - [The Illustrated GPT-2](http://jalammar.github.io/illustrated-gpt2/) (Visualizing Transformer Language Models) (Alammar, 2019)
  - [How GPT3 Works - Visualizations and Animations](http://jalammar.github.io/how-gpt3-works-visualizations-animations/) (Alammar, 2020)
  
