@@ -34,3 +34,13 @@ conda install -y -c rapidsai -c nvidia -c numba -c conda-forge -c pytorch cudf=0
 
 pip install sklearn fastai tqdm==tqdm==4.48.2 pytorch-lightning==1.0.0 seaborn wandb
 ```
+
+### rapdis17
+Get rapids installation command from https://rapids.ai/start.html
+
+```shell
+conda create -n rapids17 -c rapidsai -c nvidia -c conda-forge \
+    -c defaults rapids-blazing=0.17 python=3.8 cudatoolkit=11.0
+
+pip install sklearn fastai tqdm==4.48.2 pytorch-lightning seaborn wandb nodejs jupyterlab jupyterlab-git
+```
