@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+    rapids:
+        container_name: rapids
+        build: .
+        image: rapids17
+        #    runtime: nvidia
+        #    user: $UID:$GID
+        #        volumes:
+        #    - ~/machine-learning:/rapids/ml
+        #ports:
+        #    - 8888:8888
+        #    - 8886:8886
+        #    - 8887:8887
+        #cmd: source ~/.bashrc;jupyter notebook --allow-root --ip 0.0.0.0
