@@ -4,6 +4,7 @@
 
 #### Sampling
 - https://twiecki.io/blog/2015/11/10/mcmc-sampling/
+- [Bayesian Inference, Markov Chain Monte Carlo and Metropolis Hastings, in python](https://towardsdatascience.com/from-scratch-bayesian-inference-markov-chain-monte-carlo-and-metropolis-hastings-in-python-ef21a29e25a)
 
 #### LSTM
 - [Fancy RNNS](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture07-fancy-rnn.pdf) from [CS224N 2019 from Stanford](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/)
