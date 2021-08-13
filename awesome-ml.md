@@ -2,6 +2,9 @@
 - [Vectors, Matrices, and Least Squares - Stephen Boyd](https://stanford.edu/~boyd/vmls/vmls.pdf)
 - [Python companion to VMLS](https://ses.library.usyd.edu.au/bitstream/handle/2123/21370/vmls-python-companion.pdf)
 
+#### Sampling
+- https://twiecki.io/blog/2015/11/10/mcmc-sampling/
+
 #### LSTM
 - [Fancy RNNS](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/slides/cs224n-2019-lecture07-fancy-rnn.pdf) from [CS224N 2019 from Stanford](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/)
 
