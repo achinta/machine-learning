@@ -26,6 +26,17 @@ Positional Encodings - https://kazemnejad.com/blog/transformer_architecture_posi
 #### MLOps
 Suggested readings from coursera specialization
 
+##### MLOps
+ - [Concept and Data Drift](https://towardsdatascience.com/machine-learning-in-production-why-you-should-care-about-data-and-concept-drift-d96d0bc907fb)
+ - [Monitoring ML Models](https://christophergs.com/machine%20learning/2020/03/14/how-to-monitor-machine-learning-models/)
  - [Establishing a baseline](https://blog.ml.cmu.edu/2020/08/31/3-baselines/)
  - [Error analysis](https://techcommunity.microsoft.com/t5/azure-ai/responsible-machine-learning-with-error-analysis/ba-p/2141774)
+ - [Hidden Technical Debt in Machine Learning Systems](https://papers.nips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)
  - [Experiment tracking](https://neptune.ai/blog/ml-experiment-tracking)
+
+ - [Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims](https://arxiv.org/pdf/2004.07213v2.pdf)
+ - [Label Ambiguity](https://csgaobb.github.io/Projects/DLDL.html)
+ - [Data Lineage](https://blog.tensorflow.org/2021/01/ml-metadata-version-control-for-ml.html)
+ - [MLOPS](https://cloud.google.com/blog/products/ai-machine-learning/key-requirements-for-an-mlops-foundation)
+
+
