@@ -22,3 +22,10 @@ Positional Encodings - https://kazemnejad.com/blog/transformer_architecture_posi
 #### Machine Learning
 - [CS229 cheatsheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning)
 - [cs236756-intro-to-ml ](https://github.com/taldatech/cs236756-intro-to-ml) 
+
+#### MLOps
+Suggested readings from coursera specialization
+
+[Establishing a baseline](https://blog.ml.cmu.edu/2020/08/31/3-baselines/)
+[Error analysis](https://techcommunity.microsoft.com/t5/azure-ai/responsible-machine-learning-with-error-analysis/ba-p/2141774)
+[Experiment tracking](https://neptune.ai/blog/ml-experiment-tracking)
