@@ -3,3 +3,5 @@
 : From the basics and intuitive
 
 [University of Amstardam DL Course](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial11/NF_image_modeling.html#Normalizing-Flows-as-generative-model)
+
+[Invertible Architectures](https://github.com/VLL-HD/FrEIA)
