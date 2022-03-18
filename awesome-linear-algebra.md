@@ -4,3 +4,5 @@
 
 [Probabilistic Algorithms for Approximatate Matrix Decompositions](https://arxiv.org/pdf/0909.4061.pdf)
 
+SVD Tutorial = https://davetang.org/file/Singular_Value_Decomposition_Tutorial.pdf
+
