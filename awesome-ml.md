@@ -23,10 +23,12 @@ Positional Encodings - https://kazemnejad.com/blog/transformer_architecture_posi
 - [CS229 cheatsheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning)
 - [cs236756-intro-to-ml ](https://github.com/taldatech/cs236756-intro-to-ml) 
 
+#### Huggingface Transformers
+- [pytorch DDP -> HF Accelerate -> HF Trainer](https://huggingface.co/blog/pytorch-ddp-accelerate-transformers)
+
 #### MLOps
 Suggested readings from coursera specialization
 
-##### MLOps
  - [Concept and Data Drift](https://towardsdatascience.com/machine-learning-in-production-why-you-should-care-about-data-and-concept-drift-d96d0bc907fb)
  - [Monitoring ML Models](https://christophergs.com/machine%20learning/2020/03/14/how-to-monitor-machine-learning-models/)
  - [Establishing a baseline](https://blog.ml.cmu.edu/2020/08/31/3-baselines/)
