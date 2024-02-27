@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "llm-finetune"
+version = "0.1.0"
+description = "finetune llms using transformers library"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+transformers = "^4.38.1"
+typer = "^0.9.0"
+datasets = "^2.17.1"
+trl = "^0.7.11"
+ipykernel = "^6.29.2"
+ipywidgets = "^8.1.2"
+bitsandbytes = "^0.42.0"
+peft = "^0.8.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
