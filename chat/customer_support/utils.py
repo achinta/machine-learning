@@ -2,6 +2,7 @@
 import os
 import shutil
 import sqlite3
+import shutil
 
 import pandas as pd
 import requests
@@ -68,6 +69,10 @@ def get_travel_db(db_file_path="travel2.sqlite"):
     conn.close()
 
     return Path(db_file_path).resolve().as_posix()
+
+def restore_db(db_file_path="travel2.sqlite"):
+    backup_path  = Path("travel2.backup.sqlite")
+    shutil.copy(backup_path, db_file_path)
 
 class VectorStoreRetriever:
     def __init__(self, docs: list, vectors: list, oai_client):

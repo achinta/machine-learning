@@ -1,0 +1,4 @@
+{
+    // set python path to 'chat' folder
+    "python.pythonPath": "${workspaceFolder}/chat"
+}
