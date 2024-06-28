@@ -8,11 +8,11 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import Runnable, RunnableConfig
 
 
-class State(TypedDict):
-    # messages = Annotated[list[AnyMessage], add_messages]
-    message: Annotated[list[AnyMessage], add_messages]
 
-class ZeroShotAssistent:
+class State(TypedDict):
+    messages: Annotated[list[AnyMessage], add_messages]
+
+class ZeroShotAssistant:
     def __init__(self, runnable: Runnable):
         self.runnable = runnable
 
@@ -33,8 +33,7 @@ class ZeroShotAssistent:
                 state = {**state, "messages": messages}
             else:
                 break
-        return {"messages": result}
-    
+        return {"messages": result} 
 
 
 
