@@ -1,11 +1,16 @@
 import pytz
 from langchain_core.runnables import ensure_config
 from langchain_core.tools import tool
+from chat.llm import get_llm, LLMInferenceProvider
 
-from chat.customer_support.utils import VectorStoreRetriever
+from chat.customer_support.utils import VectorStoreRetriever, get_travel_db, get_policy_docs
+
+db = get_travel_db()
+docs = get_policy_docs()
+retriever = VectorStoreRetriever.from_docs(docs)
 
 @tool
-def lookup_policy(query: str, retriever) -> str:
+def lookup_policy(query: str) -> str:
     """Consult the company policies to check whether certain options are permitted.
     Use this before making any flight changes performing other 'write' events."""
     docs = retriever.query(query, k=2)
@@ -17,7 +22,7 @@ from typing import Optional
 
 
 @tool
-def fetch_user_flight_information(db) -> list[dict]:
+def fetch_user_flight_information() -> list[dict]:
     """Fetch all tickets for the user along with corresponding flight information and seat assignments.
 
     Returns:
@@ -58,7 +63,6 @@ def fetch_user_flight_information(db) -> list[dict]:
 
 @tool
 def search_flights(
-    db, 
     departure_airport: Optional[str] = None,
     arrival_airport: Optional[str] = None,
     start_time: Optional[date | datetime] = None,
@@ -101,7 +105,7 @@ def search_flights(
 
 
 @tool
-def update_ticket_to_new_flight(db, ticket_no: str, new_flight_id: int) -> str:
+def update_ticket_to_new_flight(ticket_no: str, new_flight_id: int) -> str:
     """Update the user's ticket to a new valid flight."""
     config = ensure_config()
     configuration = config.get("configurable", {})
@@ -169,7 +173,7 @@ def update_ticket_to_new_flight(db, ticket_no: str, new_flight_id: int) -> str:
 
 
 @tool
-def cancel_ticket(db, ticket_no: str) -> str:
+def cancel_ticket(ticket_no: str) -> str:
     """Cancel the user's ticket and remove it from the database."""
     config = ensure_config()
     configuration = config.get("configurable", {})
@@ -213,7 +217,6 @@ from typing import Optional, Union
 
 @tool
 def search_car_rentals(
-    db, 
     location: Optional[str] = None,
     name: Optional[str] = None,
     price_tier: Optional[str] = None,
@@ -284,7 +287,6 @@ def book_car_rental(rental_id: int) -> str:
 
 @tool
 def update_car_rental(
-    db, 
     rental_id: int,
     start_date: Optional[Union[datetime, date]] = None,
     end_date: Optional[Union[datetime, date]] = None,
@@ -324,7 +326,7 @@ def update_car_rental(
 
 
 @tool
-def cancel_car_rental(db, rental_id: int) -> str:
+def cancel_car_rental(rental_id: int) -> str:
     """
     Cancel a car rental by its ID.
 

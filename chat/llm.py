@@ -1,4 +1,8 @@
 from enum import Enum
+import os
+from fastembed import TextEmbedding
+
+embed_model = TextEmbedding("BAAI/bge-small-en-v1.5")
 
 class LLMInferenceProvider(Enum):
     OPENAI = "openai"
@@ -12,10 +16,12 @@ def get_llm(llm_inference_provider: LLMInferenceProvider):
     elif llm_inference_provider == LLMInferenceProvider.AZURE_OPENAI:
         from langchain_openai import AzureChatOpenAI
         # return AzureChatOpenAI(api_version="202"
-        return AzureChatOpenAI(model="deepiq35turbo", temperature=1, api_version='2024-02-01')
+        return AzureChatOpenAI(model="GPT4", temperature=1, api_version='2024-02-01')
     elif llm_inference_provider == LLMInferenceProvider.GROQ:
         from langchain_groq import GroqChat
         return GroqChat()
     else:
         raise ValueError(f"LLM inference provider {llm_inference_provider} not supported.")
+    
+
 

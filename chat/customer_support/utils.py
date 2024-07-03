@@ -3,6 +3,7 @@ import os
 import shutil
 import sqlite3
 import shutil
+import re
 
 import pandas as pd
 import requests
@@ -10,8 +11,12 @@ from pathlib import Path
 import numpy as np
 from langchain_core.messages import ToolMessage
 from langchain_core.runnables import RunnableLambda
+from fastembed import TextEmbedding
 
 from langgraph.prebuilt import ToolNode
+from chat.llm import LLMInferenceProvider
+
+embed_model = TextEmbedding("BAAI/bge-small-en-v1.5")
 
 def get_travel_db(db_file_path="travel2.sqlite"):
     '''get or create a travel database for the chatbot tutorial (if it does not exist). 
@@ -75,23 +80,24 @@ def restore_db(db_file_path="travel2.sqlite"):
     shutil.copy(backup_path, db_file_path)
 
 class VectorStoreRetriever:
-    def __init__(self, docs: list, vectors: list, oai_client):
+    def __init__(self, docs: list, vectors: list):
         self._arr = np.array(vectors)
         self._docs = docs
-        self._client = oai_client
 
     @classmethod
-    def from_docs(cls, docs, oai_client):
-        embeddings = oai_client.embeddings.create(
-            model="text-embedding-3-small", input=[doc["page_content"] for doc in docs]
-        )
-        vectors = [emb.embedding for emb in embeddings.data]
-        return cls(docs, vectors, oai_client)
+    def from_docs(cls, docs):
+        # embeddings = oai_client.embeddings.create(
+        #     model="text-embedding-3-small", input=[doc["page_content"] for doc in docs]
+        # )
+        # vectors = [emb.embedding for emb in embeddings.data]
+        vectors = list(embed_model.embed([doc["page_content"] for doc in docs]))
+        return cls(docs, vectors, )
 
     def query(self, query: str, k: int = 5) -> list[dict]:
-        embed = self._client.embeddings.create(
-            model="text-embedding-3-small", input=[query]
-        )
+        # embed = self._client.embeddings.create(
+        #     model="text-embedding-3-small", input=[query]
+        # )
+        embed = embed_model.embed([query])
         # "@" is just a matrix multiplication in python
         scores = np.array(embed.data[0].embedding) @ self._arr.T
         top_k_idx = np.argpartition(scores, -k)[-k:]
@@ -100,7 +106,13 @@ class VectorStoreRetriever:
             {**self._docs[idx], "similarity": scores[idx]} for idx in top_k_idx_sorted
         ]
 
-
+    
+def get_policy_docs():
+    response = requests.get( "https://storage.googleapis.com/benchmarks-artifacts/travel-db/swiss_faq.md")
+    response.raise_for_status()
+    faq_text = response.text
+    docs = [{"page_content": txt} for txt in re.split(r"(?=\n##)", faq_text)]
+    return docs
 
 
 def handle_tool_error(state) -> dict:
